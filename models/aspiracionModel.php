@@ -33,7 +33,7 @@
                 }
                 return true;
             } catch (PDOException $e) {
-                echo "error con el servidor";
+                echo "Error con el servidor <br>".$e->getMessage();
             }
         }
 
@@ -47,7 +47,7 @@
                 ]);
                 return true;
             } catch (PDOException $e) {
-                echo "error con el servidor";
+                echo "Error con el servidor <br>".$e->getMessage();
             }
         }
 
@@ -60,7 +60,7 @@
                 ]);
                 return true;
             } catch (PDOException $e) {
-                echo "error con el servidor";
+                echo "Error con el servidor <br>".$e->getMessage();
             }
         }
 
@@ -95,7 +95,7 @@
                 }
                 return $items;
             } catch (PDOException $e) {
-                echo "error con el servidor";
+                echo "Error con el servidor <br>".$e->getMessage();
             }
         }
 
@@ -123,7 +123,7 @@
                 }
                 return $items;
             } catch (PDOException $e) {
-                echo "error con el servidor";
+                echo "Error con el servidor <br>".$e->getMessage();
             }
         }
 
@@ -146,7 +146,7 @@
                 }
                 return $numero;
             } catch (PDOException $e) {
-                echo "error con el servidor";
+                echo "Error con el servidor <br>".$e->getMessage();
             }
         }
     }
