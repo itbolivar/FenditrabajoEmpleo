@@ -34,7 +34,7 @@ class FormacionModel extends Model
 
             return $items;
         } catch (PDOException $e) {
-            echo $e;
+            echo "Error con el servidor <br>".$e->getMessage();
         }
     }
 
@@ -58,7 +58,7 @@ class FormacionModel extends Model
             }
             return $item;
         } catch (PDOException $e) {
-            echo $e;
+            echo "Error con el servidor <br>".$e->getMessage();
         }
     }
 
@@ -77,7 +77,7 @@ class FormacionModel extends Model
             ]);
             return true;
         } catch (PDOException $e) {
-            echo $e;
+            echo "Error con el servidor <br>".$e->getMessage();
         }
     }
 
@@ -90,6 +90,7 @@ class FormacionModel extends Model
             ]);
             return true;
         } catch (PDOException $e) {
+            echo "Error con el servidor <br>".$e->getMessage();
             return false;
         }
     }
@@ -109,6 +110,7 @@ class FormacionModel extends Model
             ]);
             return true;
         } catch (PDOException $e) {
+            echo "Error con el servidor <br>".$e->getMessage();
             return false;
         }
     }

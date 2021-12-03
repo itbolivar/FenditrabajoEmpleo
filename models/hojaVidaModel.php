@@ -98,7 +98,7 @@ class HojaVidaModel extends Model
             }
             return $item;
         } catch (PDOException $e) {
-            echo "error con el servidor";
+            echo "Error con el servidor <br>".$e->getMessage();
         }
     }
 }
