@@ -42,7 +42,7 @@ class HojaVidaUsuario extends Controller
     function agregarHojaVida($param = null)
     {
         $this->loadModel('hojaVida');
-        if ($param[0] == '') {
+        if (isset($param) == '') {
             $nombre = $_POST['nombre'];
             $apellido = $_POST['apellido'];
             $tipoId = $_POST['tipoId'];
@@ -133,7 +133,7 @@ class HojaVidaUsuario extends Controller
                     echo "<script type='text/javascript'>alert('Se guardo con exito.');location.href = '" . constant('URL') . "hojaVidaUsuario';</script>";
                 }
             }
-        }
+        }  // echo "Info --- >".$param;
     }
 
     function subirImagen($nit)

@@ -13,7 +13,7 @@ class HojaVidaModel extends Model
     function agregarHoja($datos)
     {
         try {
-            $query = $this->db->connect()->prepare('INSERT INTO tb_hoja_vida (hv_nombre, hv_apellido, hv_tipo_id, hv_numero_id, hv_fecha, hv_genero, hv_estado_civil, hv_tipo_tel, hv_telefono, hv_departamento, hv_direccion, hv_nacionalidad, hv_titulo, hv_perfil, hv_foto,hv_url_hoja, fk_hv_usuario) VALUES (:nombre,:apellido,:tipoId,:numeroId,:fecha,:genero,:estadoCivil,:tipoTel,:telefono,:departamento,:direccion,:nacionalidad,:titulo,:perfil,:foto,:urlHoja,:persona)');
+            $query = $this->db->connect()->prepare('INSERT INTO tb_hoja_vida (hv_nombre, hv_apellido, hv_tipo_id, hv_numero_id, hv_fecha, hv_genero, hv_estado_civil, hv_tipo_tel, hv_telefono, hv_departamento, hv_direccion, hv_nacionalidad, hv_titulo, hv_perfil, hv_foto, fk_hv_usuario) VALUES (:nombre,:apellido,:tipoId,:numeroId,:fecha,:genero,:estadoCivil,:tipoTel,:telefono,:departamento,:direccion,:nacionalidad,:titulo,:perfil,:foto,:persona)');
             $query->execute([
                 'nombre' => $datos['nombre'],
                 'apellido' => $datos['apellido'],
@@ -34,14 +34,14 @@ class HojaVidaModel extends Model
             ]);
             return true;
         } catch (PDOException $e) {
-            echo "error con el servidor";
+            echo "Error con el servidor <br>".$e->getMessage();
         }
     }
 
     function modificarHoja($datos)
     {
         try {
-            $query = $this->db->connect()->prepare('UPDATE tb_hoja_vida SET hv_nombre=:nombre,hv_apellido=:apellido,hv_tipo_id=:tipoId,hv_numero_id=:numeroId,hv_fecha=:fecha,hv_genero=:genero,hv_estado_civil=:estadoCivil,hv_tipo_tel=:tipoTel,hv_telefono=:telefono,hv_departamento=:departamento,hv_direccion=:direccion,hv_nacionalidad=:nacionalidad,hv_titulo=:titulo,hv_perfil=:perfil,hv_foto=:foto,hv_url_hoja=:urlHoja,fk_hv_usuario=:persona WHERE hv_id = :id');
+            $query = $this->db->connect()->prepare('UPDATE tb_hoja_vida SET hv_nombre=:nombre,hv_apellido=:apellido,hv_tipo_id=:tipoId,hv_numero_id=:numeroId,hv_fecha=:fecha,hv_genero=:genero,hv_estado_civil=:estadoCivil,hv_tipo_tel=:tipoTel,hv_telefono=:telefono,hv_departamento=:departamento,hv_direccion=:direccion,hv_nacionalidad=:nacionalidad,hv_titulo=:titulo,hv_perfil=:perfil,hv_foto=:foto,fk_hv_usuario=:persona WHERE hv_id = :id');
             $query->execute([
                 'id' => $datos['id'],
                 'nombre' => $datos['nombre'],
@@ -63,7 +63,7 @@ class HojaVidaModel extends Model
             ]);
             return true;
         } catch (PDOException $e) {
-            echo "error con el servidor";
+            echo "Error con el servidor <br>".$e->getMessage();
         }
     }
 

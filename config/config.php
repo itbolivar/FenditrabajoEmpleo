@@ -5,7 +5,8 @@
 #    define('USER', 'id12406512_admin');
 #    define('PASSWORD', "1234a");
 #    define('CHARSET', 'utf8mb4');
-define('URL',       'https://empleo.fenditrabajo.com/');           //PARA ENVIAR COMIT DESCOMENTAR ESTE #define('URL',       '');
+//define('URL',       'https://empleo.fenditrabajo.com/');           //PARA ENVIAR COMIT DESCOMENTAR ESTE #define('URL',       '');
+define('URL',       'http://localhost/FenditrabajoEmpleo/');  
 define('HOST', 'localhost');       //PARA ENVIAR COMIT DESCOMENTAR ESTE #define('HOST', 'localhost');
 
  #define('URL',       'http://localhost:8080/FenditrabajoEmpleo/'); // Y COMENTAR ESTE define('URL',       'http://empleo.fenditrabajo.com/');
