@@ -27,7 +27,7 @@ class PersonaModel extends Model
                 return false;
             }
         } catch (PDOException $e) {
-            echo "error con el servidor";
+            echo "Error con el servidor <br>".$e->getMessage();
         }
     }
 
@@ -55,7 +55,7 @@ class PersonaModel extends Model
             ]);
             return true;
         } catch (PDOException $e) {
-            echo "error con el servidor";
+            echo "Error con el servidor <br>".$e->getMessage();
         }
     }
 
@@ -98,7 +98,7 @@ class PersonaModel extends Model
                 }
             }
         } catch (PDOException $e) {
-            echo "error con el servidor";
+            echo "Error con el servidor <br>".$e->getMessage();
         }
     }
 
@@ -120,7 +120,7 @@ class PersonaModel extends Model
             }
             return $items;
         } catch (PDOException $e) {
-            echo "error con el servidor";
+            echo "Error con el servidor <br>".$e->getMessage();
         }
     }
 
@@ -143,7 +143,7 @@ class PersonaModel extends Model
             }
             return $numero;
         } catch (PDOException $e) {
-            echo "error con el servidor";
+            echo "Error con el servidor <br>".$e->getMessage();
         }
     }
 
@@ -170,7 +170,7 @@ class PersonaModel extends Model
             ]);
             return true;
         } catch (PDOException $e) {
-            echo "error con el servidor";
+            echo "Error con el servidor <br>".$e->getMessage();
         }
     }
 
@@ -185,7 +185,7 @@ class PersonaModel extends Model
             ]);
             return true;
         } catch (PDOException $e) {
-            echo "error con el servidor";
+            echo "Error con el servidor <br>".$e->getMessage();
         }
     }
 
