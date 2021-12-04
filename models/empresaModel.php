@@ -27,7 +27,7 @@ class EmpresaModel extends Model
                 return false;
             }
         } catch (PDOException $e) {
-            echo "error con el servidor";
+            echo "Error con el servidor <br>".$e->getMessage();
         }
     }
 
@@ -63,7 +63,7 @@ class EmpresaModel extends Model
             ]);
             return true;
         } catch (PDOException $e) {
-            echo "error con el servidor";
+            echo "Error con el servidor <br>".$e->getMessage();
         }
     }
 
@@ -89,7 +89,7 @@ class EmpresaModel extends Model
             ]);
             return true;
         } catch (PDOException $e) {
-            echo "error con el servidor";
+            echo "Error con el servidor <br>".$e->getMessage();
         }
     }
 
@@ -120,7 +120,7 @@ class EmpresaModel extends Model
             }
             return $item;
         } catch (PDOException $e) {
-            echo "error con el servidor";
+            echo "Error con el servidor <br>".$e->getMessage();
         }
     }
 
@@ -154,7 +154,7 @@ class EmpresaModel extends Model
             }
             return $items;
         } catch (PDOException $e) {
-            echo "error con el servidor";
+            echo "Error con el servidor <br>".$e->getMessage();
         }
     }
 
@@ -178,7 +178,7 @@ class EmpresaModel extends Model
             }
             return $numero;
         } catch (PDOException $e) {
-            echo "error con el servidor";
+            echo "Error con el servidor <br>".$e->getMessage();
         }
     }
 
@@ -191,7 +191,7 @@ class EmpresaModel extends Model
             ]);
             return true;
         } catch (PDOException $e) {
-            echo "error con el servidor";
+            echo "Error con el servidor <br>".$e->getMessage();
         }
     }
 
@@ -205,7 +205,7 @@ class EmpresaModel extends Model
             ]);
             return true;
         } catch (PDOException $e) {
-            echo "error con el servidor";
+            echo "Error con el servidor <br>".$e->getMessage();
         }
     }
 
@@ -219,7 +219,7 @@ class EmpresaModel extends Model
             ]);
             return true;
         } catch (PDOException $e) {
-            echo "error con el servidor";
+            echo "Error con el servidor <br>".$e->getMessage();
         }
     }
 }

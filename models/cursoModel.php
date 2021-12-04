@@ -28,7 +28,7 @@ class CursoModel extends Model
 
             return $items;
         } catch (PDOException $e) {
-            echo $e;
+            echo "Error con el servidor <br>".$e->getMessage();
         }
     }
 
@@ -52,7 +52,7 @@ class CursoModel extends Model
 
             return $items;
         } catch (PDOException $e) {
-            echo $e;
+            echo "Error con el servidor <br>".$e->getMessage();
         }
     }
 
@@ -75,7 +75,7 @@ class CursoModel extends Model
             }
             return $numero;
         } catch (PDOException $e) {
-            echo "error con el servidor";
+            echo "Error con el servidor <br>".$e->getMessage();
         }
     }
 
@@ -99,7 +99,7 @@ class CursoModel extends Model
 
             return $item;
         } catch (PDOException $e) {
-            echo $e;
+            echo "Error con el servidor <br>".$e->getMessage();
         }
     }
 
@@ -116,7 +116,7 @@ class CursoModel extends Model
             ]);
             return true;
         } catch (PDOException $e) {
-            echo "error con el servidor";
+            echo "Error con el servidor <br>".$e->getMessage();
         }
     }
 
@@ -134,7 +134,7 @@ class CursoModel extends Model
             ]);
             return true;
         } catch (PDOException $e) {
-            echo "error con el servidor";
+            echo "Error con el servidor <br>".$e->getMessage();
         }
     }
 
@@ -147,7 +147,7 @@ class CursoModel extends Model
             ]);
             return true;
         } catch (PDOException $e) {
-            echo "error con el servidor";
+            echo "Error con el servidor <br>".$e->getMessage();
         }
     }
 }
