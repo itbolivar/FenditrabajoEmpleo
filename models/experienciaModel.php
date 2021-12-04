@@ -35,7 +35,7 @@ class ExperienciaModel extends Model
 
             return $items;
         } catch (PDOException $e) {
-            echo $e;
+            echo "Error con el servidor <br>".$e->getMessage();
         }
     }
 
@@ -60,7 +60,7 @@ class ExperienciaModel extends Model
             }
             return $item;
         } catch (PDOException $e) {
-            echo $e;
+            echo "Error con el servidor <br>".$e->getMessage();
         }
     }
 
@@ -79,7 +79,7 @@ class ExperienciaModel extends Model
             ]);
             return true;
         } catch (PDOException $e) {
-            echo $e;
+            echo "Error con el servidor <br>".$e->getMessage();
         }
 
     }
@@ -99,7 +99,7 @@ class ExperienciaModel extends Model
             ]);
             return true;
         } catch (PDOException $e) {
-            echo $e;
+            echo "Error con el servidor <br>".$e->getMessage();
         }
 
     }
@@ -113,6 +113,7 @@ class ExperienciaModel extends Model
             return true;
         }catch(PDOException $e) 
         {
+            echo "Error con el servidor <br>".$e->getMessage();
             return false;
         }
     }
