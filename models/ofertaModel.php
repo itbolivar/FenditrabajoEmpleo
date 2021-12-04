@@ -29,7 +29,7 @@ class OfertaModel extends Model
 
             return true;
         } catch (PDOException $e) {
-            echo "error con el servidor";
+            echo "Error con el servidor <br>".$e->getMessage();
         }
     }
 
@@ -49,7 +49,7 @@ class OfertaModel extends Model
 
             return true;
         } catch (PDOException $e) {
-            echo "error con el servidor";
+            echo "Error con el servidor <br>".$e->getMessage();
         }
     }
 
@@ -112,7 +112,7 @@ class OfertaModel extends Model
 
             return $items;
         } catch (PDOException $e) {
-            echo $e;
+            echo "Error con el servidor <br>".$e->getMessage();
         }
     }
 
@@ -135,7 +135,7 @@ class OfertaModel extends Model
             }
             return $numero;
         } catch (PDOException $e) {
-            echo "error con el servidor";
+            echo "Error con el servidor <br>".$e->getMessage();
         }
     }
 
@@ -168,7 +168,7 @@ class OfertaModel extends Model
 
             return $item;
         } catch (PDOException $e) {
-            echo "error con el servidor";
+            echo "Error con el servidor <br>".$e->getMessage();
         }
     }
 
@@ -204,7 +204,7 @@ class OfertaModel extends Model
             }
             return $items;
         } catch (PDOException $e) {
-            echo "error con el servidor";
+            echo "Error con el servidor <br>".$e->getMessage();
         }
     }
 
@@ -227,7 +227,7 @@ class OfertaModel extends Model
             }
             return $numero;
         } catch (PDOException $e) {
-            echo "error con el servidor";
+            echo "Error con el servidor <br>".$e->getMessage();
         }
     }
 
@@ -241,7 +241,7 @@ class OfertaModel extends Model
             $query2->execute(['id' => $id]);
             return true;
         } catch (PDOException $e) {
-            echo "error con el servidor";
+            echo "Error con el servidor <br>".$e->getMessage();
         }
     }
 }
